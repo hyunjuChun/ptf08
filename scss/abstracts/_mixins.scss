@@ -15,14 +15,14 @@
 	}
 }
 
-// @mixin media-setting($maxpoint , $minpoint) {
-// 	$max: map-get($grid-breakpoints, $maxpoint) - 0.02;
-// 	$min: map-get($grid-breakpoints, $minpoint);
+@mixin media-setting($maxpoint , $minpoint) {
+	$max: map-get($grid-breakpoints, $maxpoint) - 0.02;
+	$min: map-get($grid-breakpoints, $minpoint);
 	
-// 	@media (max-width: $max) and (min-width: $min) {
-// 		@content;
-// 	}
-// }
+	@media (max-width: $max) and (min-width: $min) {
+		@content;
+	}
+}
 
 @mixin text-clamp($line: 2, $line-height: 1.5em , $height: auto ) {
 	display: -webkit-box !important;
