@@ -1,0 +1,20 @@
+.container{
+    max-width: 1520px;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+
+    &-fluid{
+        max-width: none;
+    }
+
+    @include media-max(lg){
+        .container{
+            justify-content: center;
+            height: 28px;
+            font-size: 14px;
+        }
+        .link{
+            display: none;
+        }
+    }
+}

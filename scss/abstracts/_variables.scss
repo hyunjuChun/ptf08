@@ -3,27 +3,27 @@ $grid-breakpoints: (
 	"sm": 576px,
 	"md": 768px,
 	"lg": 992px,
-	"xl": 1200px,
+	"xl": 1169px,
 	"xxl": 1480px,
 	"xxxl": 1600px,
 );
-$mobilevh : calc((var(--vh, 1vh) * 100)) ;
 
-$color-body: #333;
-$color-dark: #191919;
-$color-primary: #0397FB;
+$mobilevh : calc((var(--vh, 1vh) * 100));
+
+$color-body: rgba(#151439, 0.4);
+$color-dark: #1E0E62;
+$color-primary: #482BE7;
 $color-white: #fff;
 
-$color-gray : #B3B3B3; 
-$color-light : #999; 
-$color-gray2 : #ccc; 
-$color-line : #eee; 
+$color-gray : #EBEAED;
+$color-light : #999;
+$color-line : #eee;
 
-$color-bg-lightgreen : #F2F8F8; 
-$color-grd : linear-gradient(50deg, #58E0F2 23.11%, #389DFA 85.61%);
+$bg-action-primary : #25DAC5;
+$bg-action-third : #E93A7D;
 
 // Typography
-$font-sans: 'pretendard', -apple-system, sans-serif; 
+$font-sans: 'DM Sans', -apple-system, sans-serif;
 
 $base-rem: 20px;
 $base-rem-mobile: 16px;
@@ -36,7 +36,7 @@ $font-weight-medium: 500;
 $font-weight-bold: 700;
 
 // util
-$radius : 20px ;
+$radius : 10px;
 
 // animation
 $animation-timing: cubic-bezier(0.165, 0.84, 0.44, 1);
