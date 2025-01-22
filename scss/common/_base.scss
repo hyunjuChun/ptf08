@@ -41,7 +41,7 @@ body, p, span, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, fo
 	font-family: $font-sans; 
 	color: inherit;
 	outline: 0;
-	letter-spacing: -0.03em;
+	letter-spacing: .03em;
 }
 body{
 	color: $color-body;
@@ -113,7 +113,7 @@ h1, h2, h3, h4, .fs-1, .fs-2, .fs-3{
 	color: $color-dark;
 }
 
-.fs-1{font-size: rem(42px);}
+.fs-1{font-size: rem(52px);}
 .fs-2{font-size: rem(36px);}
 .fs-3{font-size: rem(32px);}
 .fs-4{font-size: rem(22px);}
@@ -141,3 +141,5 @@ h1, h2, h3, h4, .fs-1, .fs-2, .fs-3{
 .text-clamp{
 	@include text-clamp;
 }
+
+.round { border-radius: 10px; }

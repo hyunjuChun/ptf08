@@ -1,5 +1,106 @@
 // btn, form style, nav, modal
 
-.form-control {
+// btn
+.btn{
+    border-radius: 5em;
+    padding: 0 rem(24px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    line-height: rem(20px);
+    min-width: rem(210px);
+    height: rem(55px);
+    gap: 8px;
+    font-size: rem(18px);
+    border: 2px solid $color-active;
+    color: $color-active !important;
+    box-shadow: none !important;
+    vertical-align: top;
+    width: 100%;
+
+    .icon{
+        margin-top: -.05em;
+    }
+
+    &:hover, &:focus{
+        background: $color-active;
+        color: $color-white !important;
+
+        .icon{
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    &-lg{
+        font-size: rem(24px);
+        height: rem(70px);
+        min-width: rem(240px);
+    }
+
+    &-dark{
+        background: #000;
+        color: #fff !important;
+    }
+
+    &:hover .icon-link{
+        transform: rotate(45deg);
+    }
+
+    @include media-max(md){
+        min-width: 120px;
+
+        &, &-lg{
+            font-size: 14px;
+            height: auto;
+            padding: 12.5px 20px;
+        }
+    }
+}
+
+.btn-text {
+    color: $color-active;
+    border: none;
+    background: none;
+    &:hover, &:active { opacity: 0.4; }
+}
+
+// form
+form {
+    input::placeholder { color: $color-body !important; }
+
+    .form-control {
+        border-radius: 5em;
+        height: 50px;
+        color: $color-body;
+        padding: .375rem 1.2rem;
+        &:focus { box-shadow: 0px 0px 4px 2px $color-active; }
+    }
     
+    input[type="checkbox"] {
+        width: 20px; height: 20px;
+    }
+    .custom-check {
+        cursor: pointer;
+        input[type="checkbox"] { display: none; }
+        .on {
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            position: relative;
+            border-radius: 6px;
+            border: solid 2px $color-gray;
+            &::after { content: ""; position: absolute; width: 7px; height: 10px; border: solid 1px $color-white; border-width: 0 2px 2px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); position: absolute; left: 6px; top: 3px; }
+        }
+        input[type="checkbox"]:checked + .on {
+            background: $color-active;
+            border: none;
+        }
+        input[type="checkbox"]:checked + .on:after {
+            display: block;
+            border: solid 1px $color-dark;
+            border-width: 0 2px 2px 0;
+        }
+    }
+
 }
