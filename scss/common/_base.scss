@@ -138,6 +138,9 @@ h1, h2, h3, h4, .fs-1, .fs-2, .fs-3{
 .bg-dark{background-color: $color-dark !important}
 .bg-light{background-color: #F6F6F6 !important}
 
+.fw500 { font-weight: $font-weight-medium; }
+.fw700 { font-weight: $font-weight-bold; }
+
 .text-clamp{
 	@include text-clamp;
 }

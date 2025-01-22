@@ -18,6 +18,35 @@
             display: none;
         }
     }
+
+}
+
+.bx-form {
+    @include flex(flex, center, center, row);
+    .input-wrp { margin: 44px 0; }
+    .form-container {
+        
+        .sect-cont {
+            margin: 44px 0;
+        }
+        .custom-check {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+    }
+    
+    .divider {
+        margin: 50px 0 25px;
+    }
+
+    @include media-max(lg){
+        .form-container {
+            padding: 0 20px;
+        }
+    }
+
 }
 
 .divider {

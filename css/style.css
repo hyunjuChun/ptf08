@@ -183,6 +183,14 @@ h1, h2, h3, h4, .fs-1, .fs-2, .fs-3 {
   background-color: #F6F6F6 !important;
 }
 
+.fw500 {
+  font-weight: 500;
+}
+
+.fw700 {
+  font-weight: 700;
+}
+
 .text-clamp {
   display: -webkit-box !important;
   overflow: hidden;
@@ -206,7 +214,6 @@ h1, h2, h3, h4, .fs-1, .fs-2, .fs-3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
   line-height: 1rem;
   min-width: 10.5rem;
   height: 2.75rem;
@@ -336,6 +343,34 @@ form .custom-check input[type=checkbox]:checked + .on:after {
   }
 }
 
+.bx-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.bx-form .input-wrp {
+  margin: 44px 0;
+}
+.bx-form .form-container .sect-cont {
+  margin: 44px 0;
+}
+.bx-form .form-container .custom-check {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.bx-form .divider {
+  margin: 50px 0 25px;
+}
+@media (max-width: 991.98px) {
+  .bx-form .form-container {
+    padding: 0 20px;
+  }
+}
+
 .divider {
   width: 100%;
   height: 1px;
@@ -344,11 +379,6 @@ form .custom-check input[type=checkbox]:checked + .on:after {
 }
 
 .bg-sign {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
   background: url("../../img/bg/Background.png") no-repeat center center;
   background-size: cover;
   width: 100%;
@@ -357,24 +387,39 @@ form .custom-check input[type=checkbox]:checked + .on:after {
 .bg-sign .container {
   max-width: 430px;
 }
-.bg-sign .input-wrp {
-  margin: 44px 0;
-}
 .bg-sign .input-group + .input-group {
   margin-top: 20px;
 }
-.bg-sign .form-container form {
-  padding: 44px 0;
+.bg-sign form {
+  padding: 29px 0;
 }
-.bg-sign .form-container .sect-cont {
-  margin: 44px 0;
+.bg-checkout {
+  flex-direction: column;
+  background: url("../../img/bg/Background2.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(47, 24, 147, 0.8);
 }
-.bg-sign .form-container .custom-check {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  margin-bottom: 30px;
+.bg-checkout .container {
+  max-width: 570px;
+  padding: 0 68px;
 }
-.bg-sign .divider {
-  margin: 50px 0 25px;
+.bg-checkout form {
+  padding: 68px 0;
+}
+.bg-checkout .form-control {
+  border-top-left-radius: 5em !important;
+  border-bottom-left-radius: 5em !important;
+}
+@media (max-width: 991.98px) {
+  .bg-checkout {
+    flex-direction: row;
+  }
+  .bg-checkout h1 {
+    margin-top: 20px;
+  }
+  .bg-checkout .form-container {
+    padding: 0 20px;
+  }
 }
