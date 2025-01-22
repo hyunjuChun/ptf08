@@ -1,5 +1,13 @@
+section {
+    padding: 100px 0;
+    @include media-max(md){
+        padding: 40px 0;
+    }
+}
+
 .container{
     max-width: 1520px;
+    width: 100%;
     padding-left: var(--container-padding);
     padding-right: var(--container-padding);
     background: #fff;
@@ -23,20 +31,21 @@
 
 .bx-form {
     @include flex(flex, center, center, row);
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
     .input-wrp { margin: 44px 0; }
     .form-container {
-        
-        .sect-cont {
-            margin: 44px 0;
-        }
         .custom-check {
             display: flex;
             justify-content: start;
-            align-items: center;
+            align-items: start;
             margin-bottom: 30px;
         }
     }
-    
+    .container {
+        max-width: 970px;
+    }
     .divider {
         margin: 50px 0 25px;
     }
@@ -49,6 +58,42 @@
 
 }
 
+.radio-wrp {
+
+    .container {
+        padding: 0 !important;
+    }
+
+    label {
+        border: 2px solid $color-gray;
+        border-radius: 10px;
+        margin: 0;
+    }
+
+    .custom-check:last-child {
+        margin-bottom: 0;
+    }
+
+    .custom-check {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        width: 100%;
+        padding: 40px 60px;
+
+        &.active {
+            border-color: $color-active;
+        }
+    }
+
+    .radio-on {
+        margin-top: 6px;
+    }
+}
+
 .divider {
-    width: 100%; height: 1px; border: 1em; background: #EBEAED;
+    width: 100%;
+    height: 1px;
+    border: 1em;
+    background: #EBEAED;
 }

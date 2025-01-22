@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xml:lang="ko" lang="ko">
 <head>
-<title>ptf-form-01</title>
+<title>ptf-form-13</title>
 <meta charset="utf-8">
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,35 +22,34 @@
     <!-- <header id="hd" class="hd">
     </header> -->
 
-    <main id="ct" class="ct bg-sign bx-form">
-        <div class="container form-container round">
-            <form class="">
-                <section>
-                    <h1 class="text-center fs-1">Sign Up Now</h1>
-                    <div class="input-wrp">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Your email">
-                        </div>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Your password">
-                        </div>
-                    </div>
+    <main id="ct" class="ct bx-form radio-wrp">
+        <section>
+            <div class="container form-container round">
+                <form class="">
+                    <h1 class="text-center fs-1">Choose Your Payment Method</h1>
                     <div class="check-group">
+                        <label class="custom-check active">
+                            <input type="radio" name="option" value="PayPal" checked>
+                            <span class="radio-on"></span>
+                            <div class="ml-3">
+                                <p class="fs-4 text-dark fw500">PayPal</p>
+                                <p class="mt-2 mb-4 fs-5">Safe payment online. Credit card needed. PayPal account is not necessary.</p>
+                                <input type="text" class="form-control col-12 col-lg-6" placeholder="Email address">
+                            </div>
+                        </label>
                         <label class="custom-check">
-                            <input type="checkbox" class="form-check">
-                            <span class="on"></span>
-                            <span class="custom-check-label ml-2">I agree to the Terms of Service.</span>
+                            <input type="radio" name="option" value="Credit Card">
+                            <span class="radio-on"></span>
+                            <div class="ml-3">
+                                <p class="fs-4 text-dark fw500">Credit Card</p>
+                                <p class="mt-2 mb-4 fs-5">Safe money transfer using your bank account.</p>
+                                <input type="text" class="form-control" placeholder="Email address">
+                            </div>
                         </label>
                     </div>
-                    <button type="button" class="btn btn-active">Create an Account</button>
-                    <div class="divider" aria-hidden></div>
-                    <div class="d-flex justify-content-center">
-                        <p>Do you have an Account?</p>
-                        <button type="button" class="btn-text ml-2">Sign In</button>
-                    </div>
-                </section>
-            </form>
-        </div>
+                </form>
+            </div>
+        </section>
     </main>
     
     <!-- <footer id="ft" class="ft">

@@ -40,6 +40,7 @@ body, p, span, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, fo
 
 body {
   color: rgba(21, 20, 57, 0.4);
+  overflow-y: auto;
 }
 body * {
   box-sizing: border-box;
@@ -157,6 +158,26 @@ h1, h2, h3, h4, .fs-1, .fs-2, .fs-3 {
 }
 .text-base {
   font-size: 1rem !important;
+}
+
+.container {
+  max-width: 1520px;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  background: #fff;
+}
+.container-fluid {
+  max-width: none;
+}
+@media (max-width: 991.98px) {
+  .container .container {
+    justify-content: center;
+    height: 28px;
+    font-size: 14px;
+  }
+  .container .link {
+    display: none;
+  }
 }
 
 .text-body {
@@ -283,25 +304,30 @@ form .form-control {
 form .form-control:focus {
   box-shadow: 0px 0px 4px 2px #25DAC5;
 }
-form input[type=checkbox] {
-  width: 20px;
-  height: 20px;
-}
 form .custom-check {
   cursor: pointer;
 }
 form .custom-check input[type=checkbox] {
   display: none;
 }
-form .custom-check .on {
+form .custom-check input[type=radio] {
+  display: none;
+}
+form input[type=checkbox] {
   width: 20px;
   height: 20px;
+}
+form .box-on {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
   background: #fff;
   position: relative;
   border-radius: 6px;
   border: solid 2px #EBEAED;
+  flex-shrink: 0;
 }
-form .custom-check .on::after {
+form .box-on::after {
   content: "";
   position: absolute;
   width: 7px;
@@ -313,18 +339,61 @@ form .custom-check .on::after {
   left: 6px;
   top: 3px;
 }
-form .custom-check input[type=checkbox]:checked + .on {
+form input[type=checkbox]:checked + .box-on {
   background: #25DAC5;
   border: none;
 }
-form .custom-check input[type=checkbox]:checked + .on:after {
+form input[type=checkbox]:checked + .box-on:after {
   display: block;
   border: solid 1px #1E0E62;
   border-width: 0 2px 2px 0;
 }
+form input[type=radio] {
+  width: 20px;
+  height: 20px;
+}
+form .radio-on {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: #fff;
+  position: relative;
+  border-radius: 5em;
+  border: solid 2px #EBEAED;
+  flex-shrink: 0;
+}
+form .radio-on::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 5em;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+form input[type=radio]:checked + .radio-on {
+  background: #25DAC5;
+  border: none;
+}
+form input[type=radio]:checked + .radio-on:after {
+  display: block;
+  background: #1E0E62;
+}
+
+section {
+  padding: 100px 0;
+}
+@media (max-width: 767.98px) {
+  section {
+    padding: 40px 0;
+  }
+}
 
 .container {
   max-width: 1520px;
+  width: 100%;
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
   background: #fff;
@@ -349,18 +418,21 @@ form .custom-check input[type=checkbox]:checked + .on:after {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 .bx-form .input-wrp {
-  margin: 44px 0;
-}
-.bx-form .form-container .sect-cont {
   margin: 44px 0;
 }
 .bx-form .form-container .custom-check {
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: start;
   margin-bottom: 30px;
+}
+.bx-form .container {
+  max-width: 970px;
 }
 .bx-form .divider {
   margin: 50px 0 25px;
@@ -369,6 +441,31 @@ form .custom-check input[type=checkbox]:checked + .on:after {
   .bx-form .form-container {
     padding: 0 20px;
   }
+}
+
+.radio-wrp .container {
+  padding: 0 !important;
+}
+.radio-wrp label {
+  border: 2px solid #EBEAED;
+  border-radius: 10px;
+  margin: 0;
+}
+.radio-wrp .custom-check:last-child {
+  margin-bottom: 0;
+}
+.radio-wrp .custom-check {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  width: 100%;
+  padding: 40px 60px;
+}
+.radio-wrp .custom-check.active {
+  border-color: #25DAC5;
+}
+.radio-wrp .radio-on {
+  margin-top: 6px;
 }
 
 .divider {
@@ -381,11 +478,10 @@ form .custom-check input[type=checkbox]:checked + .on:after {
 .bg-sign {
   background: url("../../img/bg/Background.png") no-repeat center center;
   background-size: cover;
-  width: 100%;
-  height: 100vh;
 }
 .bg-sign .container {
   max-width: 430px;
+  width: 100%;
 }
 .bg-sign .input-group + .input-group {
   margin-top: 20px;
@@ -395,18 +491,15 @@ form .custom-check input[type=checkbox]:checked + .on:after {
 }
 .bg-checkout {
   flex-direction: column;
+  flex-wrap: nowrap;
   background: url("../../img/bg/Background2.png") no-repeat center center;
   background-size: cover;
-  width: 100%;
-  height: 100vh;
   background-color: rgba(47, 24, 147, 0.8);
 }
 .bg-checkout .container {
   max-width: 570px;
-  padding: 0 68px;
-}
-.bg-checkout form {
-  padding: 68px 0;
+  width: 100%;
+  padding: 48px 68px;
 }
 .bg-checkout .form-control {
   border-top-left-radius: 5em !important;
@@ -414,12 +507,12 @@ form .custom-check input[type=checkbox]:checked + .on:after {
 }
 @media (max-width: 991.98px) {
   .bg-checkout {
-    flex-direction: row;
-  }
-  .bg-checkout h1 {
-    margin-top: 20px;
+    flex-direction: column;
   }
   .bg-checkout .form-container {
-    padding: 0 20px;
+    padding: 40px 20px;
+  }
+  .bg-checkout h1 {
+    margin-top: 1.3rem;
   }
 }

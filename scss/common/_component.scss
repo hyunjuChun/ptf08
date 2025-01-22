@@ -75,31 +75,66 @@ form {
         padding: .375rem 1.2rem;
         &:focus { box-shadow: 0px 0px 4px 2px $color-active; }
     }
-    
-    input[type="checkbox"] {
-        width: 20px; height: 20px;
-    }
+
     .custom-check {
         cursor: pointer;
         input[type="checkbox"] { display: none; }
-        .on {
-            width: 20px;
-            height: 20px;
-            background: #fff;
-            position: relative;
-            border-radius: 6px;
-            border: solid 2px $color-gray;
-            &::after { content: ""; position: absolute; width: 7px; height: 10px; border: solid 1px $color-white; border-width: 0 2px 2px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); position: absolute; left: 6px; top: 3px; }
-        }
-        input[type="checkbox"]:checked + .on {
-            background: $color-active;
-            border: none;
-        }
-        input[type="checkbox"]:checked + .on:after {
-            display: block;
-            border: solid 1px $color-dark;
-            border-width: 0 2px 2px 0;
-        }
+        input[type="radio"] { display: none; }
     }
+
+    // checkbox
+    input[type="checkbox"] {
+        width: 20px; height: 20px;
+    }
+
+    .box-on {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background: #fff;
+        position: relative;
+        border-radius: 6px;
+        border: solid 2px $color-gray;
+        flex-shrink: 0;
+        &::after { content: ""; position: absolute; width: 7px; height: 10px; border: solid 1px $color-white; border-width: 0 2px 2px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); position: absolute; left: 6px; top: 3px; }
+    }
+    input[type="checkbox"]:checked + .box-on {
+        background: $color-active;
+        border: none;
+    }
+    input[type="checkbox"]:checked + .box-on:after {
+        display: block;
+        border: solid 1px $color-dark;
+        border-width: 0 2px 2px 0;
+    }
+
+    // radio
+
+    input[type="radio"] {
+        width: 20px; height: 20px;
+    }
+
+    .radio-on {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background: #fff;
+        position: relative;
+        border-radius: 5em;
+        border: solid 2px $color-gray;
+        flex-shrink: 0;
+        &::after { content: ""; position: absolute; width: 10px; height: 10px; background: $color-white; border-radius: 5em; position: absolute; left: 5px; top: 5px; }
+    }
+
+    input[type="radio"]:checked + .radio-on {
+        background: $color-active;
+        border: none;
+    }
+    
+    input[type="radio"]:checked + .radio-on:after {
+        display: block;
+        background: $color-dark;
+    }
+
 
 }
