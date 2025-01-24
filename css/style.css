@@ -715,12 +715,58 @@ h1 {
   display: flex;
   justify-content: center;
   width: 100%;
-  gap: 1.5rem;
-  margin: 4rem 0;
+  gap: 1.2rem;
+  margin: 2.5rem 0;
 }
 .bx-showcase .btn-wrp .btn {
   width: 10rem;
 }
 .bx-showcase .design-wrp {
   row-gap: 50px;
+}
+.bx-showcase .team-wrp .profile.bx-bd {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.bx-showcase .team-wrp .sns-wrp.bx-bd {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.bx-showcase .team-wrp .img-wrp {
+  width: 6rem;
+  height: 6rem;
+}
+.bx-showcase .team-wrp .sns-wrp {
+  border-top: 0;
+}
+.bx-showcase .team-wrp .sns-wrp .btn-sns {
+  padding: 0.9rem 0;
+}
+.bx-showcase .team-wrp .sns-wrp .btn-sns i {
+  transition: all 200ms ease-in-out;
+}
+.bx-showcase .team-wrp .sns-wrp .btn-sns:hover i, .bx-showcase .team-wrp .sns-wrp .btn-sns:active i {
+  transform: scale(1.1);
+  color: #1E0E62;
+}
+.bx-showcase .team-wrp .sns-wrp .right-border {
+  border-right: 2px solid #EBEAED;
+}
+.bx-showcase .team-wrp .profile {
+  padding: 2.5rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.4rem;
+}
+@media (max-width: 767.98px) {
+  .bx-showcase h1 + p {
+    padding: 0;
+  }
+  .bx-showcase .btn-wrp {
+    gap: 0.5rem;
+  }
+  .bx-showcase .team-wrp {
+    row-gap: 1rem;
+  }
 }
