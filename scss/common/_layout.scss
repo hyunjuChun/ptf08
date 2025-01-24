@@ -24,6 +24,11 @@ h1 {
     padding-right: var(--container-padding);
     background: #fff;
 
+    @include media-min(lg){
+        padding: 0;
+    }
+
+
     &-fluid{
         max-width: none;
     }

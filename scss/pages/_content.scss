@@ -1,0 +1,14 @@
+.bx-content {
+    .container {
+        max-width: rem(1050px);
+        width: 100%;
+        position: relative;
+    }
+
+    .text-dark {
+        margin-top: rem(6px);
+    }
+    .text-dark + p {
+        margin: rem(20px) 0 rem(54px);
+    }
+}

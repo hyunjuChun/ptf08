@@ -487,6 +487,27 @@ form textarea::placeholder {
   height: 3.5rem;
   background: url(../../img/icon/play-button.png) no-repeat 0 0/100% auto;
 }
+.video-wrp .btn-white-play {
+  position: absolute;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  background: url(../../img/icon/play-button-white.png) no-repeat 0 0/100% auto;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5em;
+  background: #ebeaed;
+  color: rgba(21, 20, 57, 0.4);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-right: 1.5rem;
+}
 
 main {
   min-height: 100vh;
@@ -519,6 +540,11 @@ h1 {
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
   background: #fff;
+}
+@media (min-width: 992px) {
+  .container {
+    padding: 0;
+  }
 }
 .container-fluid {
   max-width: none;
@@ -702,7 +728,6 @@ h1 {
 .bx-contact .container {
   max-width: 48.5rem;
   width: 100%;
-  padding: 0;
 }
 .bx-contact textarea {
   min-height: 8.5rem;
@@ -819,7 +844,6 @@ h1 {
 .bx-membership .container {
   max-width: 38.5rem;
   width: 100%;
-  padding: 0;
 }
 .bx-membership h1 {
   margin-bottom: 1.5rem;
@@ -907,4 +931,16 @@ h1 {
 }
 .bx-testimonial .bx-bd {
   border-color: rgba(235, 234, 237, 0.15);
+}
+
+.bx-content .container {
+  max-width: 52.5rem;
+  width: 100%;
+  position: relative;
+}
+.bx-content .text-dark {
+  margin-top: 0.3rem;
+}
+.bx-content .text-dark + p {
+  margin: 1rem 0 2.7rem;
 }

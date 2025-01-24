@@ -262,4 +262,25 @@ form {
         height: rem(70px);
         background: url(../../img/icon/play-button.png) no-repeat 0 0/100% auto;
     }
+    .btn-white-play {
+        position: absolute;
+        display: inline-block;
+        width: rem(100px);
+        height: rem(100px);
+        background: url(../../img/icon/play-button-white.png) no-repeat 0 0/100% auto;
+    }
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(40px);
+    height: rem(40px);
+    border-radius: 5em;
+    background: #ebeaed;
+    color: rgba(21, 20, 57, .4);
+    font-size: rem(18px);
+    flex-shrink: 0;
+    margin-right: rem(30px);
 }
