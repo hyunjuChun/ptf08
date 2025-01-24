@@ -120,7 +120,7 @@ h1, h2, h3, h4, .fs-1, .fs-2, .fs-3{
 .fs-3{font-size: rem(32px);}
 .fs-4{font-size: rem(22px);}
 .fs-5{font-size: rem(18px);}
-.fs-6{font-size: rem(16px);}
+.fs-6{font-size: rem(16px);line-height: rem(26px);}
 .sm{font-size: rem(14px);}
 
 .fw-mid{font-weight: 600;}
@@ -158,6 +158,7 @@ h1, h2, h3, h4, .fs-1, .fs-2, .fs-3{
 .text-dark{color:$color-dark !important}
 .text-primary{color:$color-primary !important}
 .text-muted{color: $color-gray !important}
+.text-active{color: $color-active !important}
 
 .bg-dark{background-color: $color-dark !important}
 .bg-light{background-color: #F6F6F6 !important}

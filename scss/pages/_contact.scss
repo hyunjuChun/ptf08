@@ -1,0 +1,42 @@
+.bx-contact {
+    h1 {
+        margin: 0;
+    }
+    h1 + p {
+        margin-top: rem(24px);
+    }
+    p + form {
+        margin-top: rem(40px);
+    }
+    .img-wrp {
+        width: 100%;
+        height: auto;
+    }
+    .container {
+        max-width: rem(970px);
+        width: 100%;
+        padding: 0;
+    }
+
+    textarea {
+        min-height: rem(170px);
+        border-radius: rem(10px);
+    }
+    .address {
+        margin: rem(50px) 0;
+    }
+
+    .d-flex {
+        gap: rem(10px);
+        button {
+            max-width: rem(90px);
+        }
+    }
+    .divider {
+        margin-bottom: rem(50px);
+    }
+
+    @include media-max(md){
+        .img-wrp { height: 200px; }
+    }
+}

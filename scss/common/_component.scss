@@ -12,6 +12,13 @@
     border-radius: 10px;
 }
 
+.img-wrp img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 // btn
 .btn{
     border-radius: 5em;
@@ -24,23 +31,12 @@
     height: rem(55px);
     gap: 8px;
     font-size: rem(18px);
-    border: 2px solid $color-active;
-    color: $color-active !important;
-    box-shadow: none !important;
+    box-shadow: none;
     vertical-align: top;
     width: 100%;
 
     .icon{
         margin-top: -.05em;
-    }
-
-    &:hover, &:focus{
-        background: $color-active;
-        color: $color-white !important;
-
-        .icon{
-            filter: brightness(0) invert(1);
-        }
     }
 
     &-sm{
@@ -53,13 +49,28 @@
         min-width: rem(240px);
     }
 
-    &-dark{
-        background: #000;
-        color: #fff !important;
+
+    &-active{
+        background: #fff;
+        color: $color-active;
+        border: 2px solid $color-active;
+
+        &:hover, &:focus{
+            background: $color-active;
+            color: $color-white !important;
+        }
     }
 
-    &:hover .icon-link{
-        transform: rotate(45deg);
+    &-white{
+        background: #fff;
+        color: $color-dark;
+        border: 2px solid $color-gray;
+
+        &:hover, &:focus{
+            background: $color-dark;
+            color: $color-white !important;
+            border: 2px solid $color-dark;
+        }
     }
 
     @include media-max(md){
@@ -77,17 +88,16 @@
     color: $color-active;
     border: none;
     background: none;
-    &:hover, &:active { opacity: 0.4; }
-}
-
-.form-control {
-    border-top-left-radius: 5em !important;
-    border-bottom-left-radius: 5em !important;
+    &:hover, &:active {
+        opacity: 0.4;
+    }
 }
 
 // form
 form {
-    input::placeholder { color: $color-body !important; }
+    input::placeholder {
+        color: $color-body !important;
+    }
 
     .form-control {
         border-radius: 5em;
@@ -95,6 +105,10 @@ form {
         color: $color-body;
         padding: .375rem 1.2rem;
         &:focus { box-shadow: 0px 0px 4px 2px $color-active; }
+        border-top-left-radius: 5em;
+        border-bottom-left-radius: 5em;
+        border-top-right-radius: 5em;
+        border-bottom-right-radius: 5em;
     }
 
     .custom-check {
@@ -117,7 +131,19 @@ form {
         border-radius: 6px;
         border: solid 2px $color-gray;
         flex-shrink: 0;
-        &::after { content: ""; position: absolute; width: 7px; height: 10px; border: solid 1px $color-white; border-width: 0 2px 2px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); position: absolute; left: 6px; top: 3px; }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 7px;
+            height: 10px;
+            border: solid 1px $color-white;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            position: absolute;
+            left: 6px; top: 3px;
+        }
     }
     input[type="checkbox"]:checked + .box-on {
         background: $color-active;
@@ -144,7 +170,17 @@ form {
         border-radius: 5em;
         border: solid 2px $color-gray;
         flex-shrink: 0;
-        &::after { content: ""; position: absolute; width: 10px; height: 10px; background: $color-white; border-radius: 5em; position: absolute; left: 5px; top: 5px; }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: $color-white;
+            border-radius: 5em;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+        }
     }
 
     input[type="radio"]:checked + .radio-on {
@@ -157,5 +193,26 @@ form {
         background: $color-dark;
     }
 
+    // textarea
+    textarea {
+        &::placeholder {
+            color: $color-body !important;
+        }
+    }
 
+}
+
+// video-wrp
+.video-wrp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btn-play {
+        position: absolute;
+        display: inline-block;
+        width: rem(70px);
+        height: rem(70px);
+        background: url(../../img/icon/play-button.png) no-repeat 0 0/100% auto;
+    }
 }

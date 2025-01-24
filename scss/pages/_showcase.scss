@@ -1,0 +1,23 @@
+.bx-showcase {
+    .container {
+        max-width: 1170px;
+        width: 100%;
+    }
+
+    h1 { margin-bottom: rem(30px); }
+    h1 + p { padding: 0 rem(200px); }
+    p.fs-4 { margin: 14px 0 10px; }
+    .btn-wrp {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: rem(30px);
+        margin: rem(80px) 0;
+        .btn {
+            width: rem(200px);
+        }
+    }
+    .design-wrp {
+        row-gap: 50px;
+    }
+}

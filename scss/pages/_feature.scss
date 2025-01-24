@@ -1,0 +1,19 @@
+.bx-feature {
+    .container {
+        max-width: 1170px;
+        width: 100%;
+    }
+    
+    h1 {
+        margin-bottom: rem(30px);
+    }
+    .divider {
+        margin: 90px 0;
+    }
+    i + p {
+        margin: rem(30px) 0;
+    }
+    .text-muted {
+        font-size: rem(42px);
+    }
+}
