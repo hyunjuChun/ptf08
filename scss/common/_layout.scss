@@ -1,3 +1,11 @@
+main {
+    min-height: 100vh;
+    @include flex(flex, center, center, row);
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
 section {
     padding: 100px 0;
     @include media-max(md){
@@ -38,10 +46,6 @@ h1 {
 }
 
 .bx-form {
-    @include flex(flex, center, center, row);
-    width: 100%;
-    min-height: 100vh;
-    overflow-y: auto;
     .input-wrp { margin: 44px 0; }
     .form-container {
         .custom-check {

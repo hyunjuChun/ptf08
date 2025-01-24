@@ -8,10 +8,6 @@
     }
 }
 
-.round {
-    border-radius: 10px;
-}
-
 .img-wrp img {
     display: block;
     width: 100%;
@@ -57,6 +53,17 @@
 
         &:hover, &:focus{
             background: $color-active;
+            color: $color-white !important;
+        }
+    }
+
+    &-pink{
+        background: #fff;
+        color: $color-active-third;
+        border: 2px solid $color-active-third;
+
+        &:hover, &:focus{
+            background: $color-active-third;
             color: $color-white !important;
         }
     }
@@ -198,6 +205,46 @@ form {
         &::placeholder {
             color: $color-body !important;
         }
+    }
+
+}
+
+.form-switch {
+
+    padding: 0;
+    height: rem(30px);
+    cursor: pointer;
+    input[type="checkbox"] { display: none; }
+
+    .switch-on{
+        width: rem(42px);
+        height: rem(30px);
+        display: inline-block;
+        background: $color-active;
+        position: relative;
+        border-radius: 5em;
+        border: 0;
+        flex-shrink: 0;
+        &::after {
+            content: "";
+            position: absolute;
+            width: rem(24px);
+            height: rem(24px);
+            background: #fff;
+            border-radius: 5em;
+            position: absolute;
+            top: 3px;
+        }
+    }
+
+    input[type="checkbox"]:checked + .switch-on:after {
+        content: "";
+        transform: translateX(3px);
+    }
+    input[type="checkbox"] + .switch-on:after {
+        content: "";
+        transform: translateX(15px);
+        transition: transform 200ms ease-in-out;
     }
 
 }

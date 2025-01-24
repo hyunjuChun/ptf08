@@ -1,0 +1,44 @@
+.bx-membership {
+    .container {
+        max-width: rem(770px);
+        width: 100%;
+        padding: 0;
+    }
+
+    h1 { margin-bottom: rem(30px); }
+    h1 + p { padding: 0 rem(200px); }
+    p.fs-4 { margin: 14px 0 10px; }
+    .btn-wrp {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: rem(24px);
+        margin: rem(50px) 0;
+        .btn {
+            width: rem(200px);
+        }
+    }
+
+    li {
+        .img-wrp {
+            width: 100%; height: auto;
+        }
+        .membership-wrp {
+            padding: rem(46px);
+        }
+        .bx-bd {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        p {
+            margin: rem(32px) 0;
+        }
+    }
+
+    @include media-max(md){
+        h1 + p { padding: 0; }
+        .btn-wrp {
+            gap: rem(10px);
+        }
+    }
+}

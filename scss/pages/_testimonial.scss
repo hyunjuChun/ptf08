@@ -1,0 +1,49 @@
+.bx-testimonial {
+    background: #1E0E62;
+
+    .container {
+        max-width: 1050px;
+        width: 100%;
+        background: #1E0E62;
+    }
+    
+    h1 {
+        margin-bottom: rem(30px);
+        color: white;
+    }
+    
+    .client-wrp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: rem(30px);
+        li {
+            display: flex;
+            width: calc(50% - 15px);
+            padding: rem(35px);
+            min-height: rem(238px);
+            .img-wrp {
+                width: rem(70px);
+                height: rem(70px);
+                margin-right: rem(30px);
+                flex-shrink: 0;
+            }
+            strong {
+                letter-spacing: rem(2px);
+                opacity: 0.4;
+                font-weight: 400;
+                display: block;
+                margin-top: rem(14px);
+            }
+            .interview {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .bx-bd {
+        border-color: rgba(235, 234, 237, .15);
+    }
+}
