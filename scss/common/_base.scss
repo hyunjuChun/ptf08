@@ -6,6 +6,7 @@
 
 // 기본베이스 : 폰트, 컬러, 타이포
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fastly.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
 :root{
     --container-padding: 40px;
@@ -119,6 +120,7 @@ h1, h2, h3, h4, .fs-1, .fs-2, .fs-3{
 .fs-3{font-size: rem(32px);}
 .fs-4{font-size: rem(22px);}
 .fs-5{font-size: rem(18px);}
+.fs-6{font-size: rem(16px);}
 .sm{font-size: rem(14px);}
 
 .fw-mid{font-weight: 600;}
@@ -168,3 +170,5 @@ h1, h2, h3, h4, .fs-1, .fs-2, .fs-3{
 }
 
 .round { border-radius: 10px; }
+
+.sm.letter-spaing-2 { letter-spacing: rem(2px); }

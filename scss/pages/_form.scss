@@ -36,3 +36,49 @@
         }
     }
 }
+
+.radio-wrp {
+    .input-group .d-flex {
+        justify-content: space-between;
+        input {
+            max-width: rem(77px);
+        }
+        button {
+            max-width: rem(140px);
+        }
+    }
+    @include media-max(sm){
+        padding: 20px;
+        .input-group .d-flex {
+            display: block !important;
+            input {
+                max-width: rem(100px);
+            }
+            button {
+                display: block;
+                max-width: none;
+            }
+        }
+    }
+
+}
+
+.bx-account {
+    .container {
+        max-width: rem(770px);
+        width: 100%;
+        padding: rem(86px);
+    }
+
+    .d-flex {
+        i { font-size: rem(52px); }
+        p { line-height: rem(26px); }
+    }
+    
+    @include media-max(sm){
+        .container {
+            padding: 28px;
+        }
+    }
+
+}

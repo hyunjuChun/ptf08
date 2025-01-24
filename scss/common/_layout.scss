@@ -5,6 +5,10 @@ section {
     }
 }
 
+h1 {
+    margin-bottom: rem(45px);
+}
+
 .container{
     max-width: 1520px;
     width: 100%;
@@ -25,6 +29,10 @@ section {
         .link{
             display: none;
         }
+    }
+
+    @include media-max(md){
+        padding: 0 20px;
     }
 
 }
@@ -62,11 +70,12 @@ section {
 
     .container {
         padding: 0 !important;
+        @include media-max(lg){
+            padding: 0 20px !important;
+        }
     }
 
     label {
-        border: 2px solid $color-gray;
-        border-radius: 10px;
         margin: 0;
     }
 
@@ -81,13 +90,17 @@ section {
         width: 100%;
         padding: 40px 60px;
 
-        &.active {
-            border-color: $color-active;
+        @include media-max(sm){
+            padding: 20px;
         }
     }
 
     .radio-on {
         margin-top: 6px;
+
+        @include media-max(sm){
+            margin-top: 2px;
+        }
     }
 }
 

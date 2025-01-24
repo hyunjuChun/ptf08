@@ -28,7 +28,7 @@
                 <form class="">
                     <h1 class="text-center fs-1">Choose Your Payment Method</h1>
                     <div class="check-group">
-                        <label class="custom-check active">
+                        <label class="custom-check bx-bd round active">
                             <input type="radio" name="option" value="PayPal" checked>
                             <span class="radio-on"></span>
                             <div class="ml-3">
@@ -37,13 +37,41 @@
                                 <input type="text" class="form-control col-12 col-lg-6" placeholder="Email address">
                             </div>
                         </label>
-                        <label class="custom-check">
+                        <label class="custom-check bx-bd round">
                             <input type="radio" name="option" value="Credit Card">
                             <span class="radio-on"></span>
                             <div class="ml-3">
-                                <p class="fs-4 text-dark fw500">Credit Card</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="fs-4 text-dark fw500">Credit Card</p>
+                                    <div class="fs-3 text-muted">
+                                        <i class="fa-brands fa-cc-visa"></i>
+                                        <i class="fa-brands fa-cc-mastercard"></i>
+                                        <i class="fa-brands fa-cc-discover"></i>
+                                        <i class="fa-brands fa-cc-amex"></i>
+                                    </div>
+                                </div>
                                 <p class="mt-2 mb-4 fs-5">Safe money transfer using your bank account.</p>
-                                <input type="text" class="form-control" placeholder="Email address">
+                                <div class="row justify-content-between">
+                                    <div class="input-group d-block col-12 col-lg-6">
+                                        <p class="text-dark sm letter-spaing-2 fw700 mb-2">CREDIT CARD NUMBER</p>
+                                        <input type="text" class="form-control w-100" placeholder="">
+                                    </div>
+                                    <div class="input-group d-block col-12 col-lg-6 mt-3 mt-lg-0">
+                                        <p class="text-dark sm letter-spaing-2 fw700 mb-2">EXPIRATION</p>
+                                        <input type="text" class="form-control w-100" placeholder="">
+                                    </div>
+                                    <div class="input-group d-block col-12 col-lg-6 mt-3">
+                                        <p class="text-dark sm letter-spaing-2 fw700 mb-2">CARDHOLDER NAME</p>
+                                        <input type="text" class="form-control w-100" placeholder="">
+                                    </div>
+                                    <div class="input-group d-block col-12 col-lg-6 mt-3">
+                                        <p class="text-dark sm letter-spaing-2 fw700 mb-2">CVV CODE</p>
+                                        <div class="d-flex">
+                                            <input type="text" class="form-control" placeholder="" maxlength="3">
+                                            <button type="button" class="btn btn-active mt-5 mt-lg-0">Checkout</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </label>
                     </div>

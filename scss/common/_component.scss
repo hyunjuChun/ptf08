@@ -1,5 +1,17 @@
 // btn, form style, nav, modal
 
+// bx-bd
+.bx-bd {
+    border: 2px solid $color-gray;
+    &.active {
+        border-color: $color-active;
+    }
+}
+
+.round {
+    border-radius: 10px;
+}
+
 // btn
 .btn{
     border-radius: 5em;
@@ -29,6 +41,10 @@
         .icon{
             filter: brightness(0) invert(1);
         }
+    }
+
+    &-sm{
+        min-width: rem(120px);
     }
 
     &-lg{
@@ -62,6 +78,11 @@
     border: none;
     background: none;
     &:hover, &:active { opacity: 0.4; }
+}
+
+.form-control {
+    border-top-left-radius: 5em !important;
+    border-bottom-left-radius: 5em !important;
 }
 
 // form
