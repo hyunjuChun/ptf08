@@ -8,6 +8,12 @@
     }
 }
 
+.img-wrp {
+    display: inline-block;
+    width: 100%;
+    border-radius: rem(10px);
+}
+
 .img-wrp img {
     display: block;
     width: 100%;
@@ -265,8 +271,8 @@ form {
     .btn-white-play {
         position: absolute;
         display: inline-block;
-        width: rem(100px);
-        height: rem(100px);
+        width: rem(50px);
+        height: rem(50px);
         background: url(../../img/icon/play-button-white.png) no-repeat 0 0/100% auto;
     }
 }
@@ -275,12 +281,24 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: rem(40px);
-    height: rem(40px);
     border-radius: 5em;
     background: #ebeaed;
     color: rgba(21, 20, 57, .4);
     font-size: rem(18px);
     flex-shrink: 0;
-    margin-right: rem(30px);
+}
+
+.fa-solid.fa-circle.active {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        width: rem(12px);
+        height: rem(8px);
+        background: url("../../img/icon/ic-check.svg") no-repeat 0 0/100% auto;
+        z-index: 3;
+    }
 }

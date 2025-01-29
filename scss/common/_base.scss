@@ -166,6 +166,17 @@ h1, h2, h3, h4, .fs-1, .fs-2, .fs-3{
 .fw500 { font-weight: $font-weight-medium; }
 .fw700 { font-weight: $font-weight-bold; }
 
+// circle
+.color-red { color: #C8232C; }
+.color-red2 { color: #EA3223; }
+.color-pink { color: #E93A7D; }
+.color-ylw { color: #FFFC00; }
+.color-grn { color: #27AE60; }
+.color-sky { color: #1DA1F2; }
+.color-blue { color: #4267B2; }
+.color-purple { color: #482BE7; }
+.color-darkgray { color: #1E0E62; }
+
 .text-clamp{
     @include text-clamp;
 }

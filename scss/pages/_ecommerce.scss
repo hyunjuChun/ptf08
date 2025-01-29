@@ -1,0 +1,29 @@
+.bx-ecommerce {
+    .container {
+        max-width: rem(1170px);
+        ul {
+            row-gap: rem(60px);
+        }
+    }
+
+    .product {
+        margin: rem(14px) 0;
+
+        .badge {
+            min-height: rem(30px);
+            min-width: rem(67px);
+        }
+    }
+
+    @include media-max(lg){
+        .container {
+            ul {
+                row-gap: rem(50px);
+            }
+        }
+
+        .product {
+            margin: rem(8px) 0;
+        }
+    }
+}

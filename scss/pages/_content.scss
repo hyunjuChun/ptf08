@@ -5,10 +5,58 @@
         position: relative;
     }
 
+    .video-wrp {
+        width: rem(170px);
+        margin-right: rem(10px);
+        
+    }
+    .video-wrp + div {
+        max-width: rem(304px);
+    }
+
     .text-dark {
         margin-top: rem(6px);
     }
     .text-dark + p {
-        margin: rem(20px) 0 rem(54px);
+        margin-top: rem(20px);
+    }
+
+    .btn-active {
+        max-width: rem(160px);
+    }
+
+    li {
+        position: relative;
+        overflow: hidden;
+        .badge {
+            position: relative;
+            z-index: 2;
+            width: rem(40px);
+            height: rem(40px);
+            margin-right: rem(30px);
+        }
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            left: 19px;
+            z-index: 1;
+            background: #ebeaed;
+        }
+        &:last-child::before {
+            content: "";
+            display: none;
+        }
+    }
+
+    @include media-max(lg){
+        .badge {
+            margin-right: .8em;
+        }
+        li::before {
+            left: 15px;
+        }
     }
 }
