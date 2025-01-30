@@ -1,16 +1,27 @@
 .bg {
+    section {
+        width: 100%;
+    }
+
     &-sign {
-        .container {
-            max-width: 430px;
-            width: 100%;
+
+        .form-container {
+            padding-left: rem(50px);
+            padding-right: rem(50px);
         }
+
+        .container {
+            max-width: 430px !important;
+            width: 100% !important;
+        }
+        
         background: url("../../img/bg/Background.png") no-repeat center center;
         background-size: cover;
-        .input-group + .input-group { margin-top: 20px; }
         form {
             padding: 29px 0;
         }
     }
+
     &-checkout {
         flex-direction: column;
         flex-wrap: nowrap;
@@ -38,25 +49,34 @@
 }
 
 .radio-wrp {
-    .input-group .d-flex {
+    .container {
+        max-width: rem(970px);
+    }
+
+    p + .d-flex {
         justify-content: space-between;
         input {
             max-width: rem(77px);
         }
         button {
             max-width: rem(140px);
+            height: 50px;
         }
     }
+
+
     @include media-max(sm){
-        padding: 20px;
-        .input-group .d-flex {
-            display: block !important;
+
+        p + .d-flex {
+            flex-direction: column;
+
             input {
                 max-width: rem(100px);
             }
             button {
                 display: block;
                 max-width: none;
+                width: 100%;
             }
         }
     }

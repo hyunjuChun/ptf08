@@ -7,9 +7,11 @@ main {
 }
 
 section {
-    padding: 100px 0;
+    padding: rem(100px) 0;
+    width: 100%;
+    
     @include media-max(md){
-        padding: 40px 0;
+        padding: rem(40px) rem(16px);
     }
 }
 
@@ -60,9 +62,6 @@ h1 {
             margin-bottom: 30px;
         }
     }
-    .container {
-        max-width: 970px;
-    }
     .divider {
         margin: 50px 0 25px;
     }
@@ -80,7 +79,7 @@ h1 {
     .container {
         padding: 0 !important;
         @include media-max(lg){
-            padding: 0 20px !important;
+            padding: 0;
         }
     }
 

@@ -170,12 +170,15 @@ h1, h2, h3, h4, .fs-1, .fs-2, .fs-3{
 .color-red { color: #C8232C; }
 .color-red2 { color: #EA3223; }
 .color-pink { color: #E93A7D; }
+.color-pink2 { color: #EB5757; }
+.color-org { color: #F2994A; }
 .color-ylw { color: #FFFC00; }
 .color-grn { color: #27AE60; }
 .color-sky { color: #1DA1F2; }
 .color-blue { color: #4267B2; }
 .color-purple { color: #482BE7; }
 .color-darkgray { color: #1E0E62; }
+.color-gray { color: $color-gray; }
 
 .text-clamp{
     @include text-clamp;

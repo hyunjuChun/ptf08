@@ -46,4 +46,16 @@
     .bx-bd {
         border-color: rgba(235, 234, 237, .15);
     }
+
+
+    @include media-max(lg){
+        .client-wrp {
+            flex-direction: column;
+
+            li {
+                width: 100%;
+            }
+        }
+        
+    }
 }

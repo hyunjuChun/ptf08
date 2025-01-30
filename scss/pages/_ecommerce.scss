@@ -1,8 +1,64 @@
 .bx-ecommerce {
+    
+    section {
+        width: 100%;
+    }
+
     .container {
         max-width: rem(1170px);
+
         ul {
             row-gap: rem(60px);
+        }
+    }
+
+    // ecommerce-nav style
+    .nav {
+        margin-bottom: rem(22px);
+        &.nav-tabs {
+            border-bottom: none;
+        }
+        .nav-link {
+            border: none;
+            &:hover, &:active {
+                border: none;
+            }
+        }
+        .active { border: 0; }
+
+        li + li {
+            margin-left: rem(32px);
+        }
+        .nav-link {
+            padding: 1rem 0 .3rem;
+            margin-bottom: .7rem;
+
+        }
+
+        &-1 {
+            .nav-item {
+                color: #1E0E62;
+                font-weight: 700;
+
+                .active {
+                    color: rgba(#151439, .4);
+                    border-bottom: 3px solid rgba(#151439, .4);
+
+                }
+            }
+        }
+
+        &-2 {
+            .nav-item {
+                color: rgba(#151439, .4);
+                font-weight: 700;
+                letter-spacing: rem(2px);
+
+                .active {
+                    color: #1E0E62;
+
+                }
+            }
         }
     }
 
@@ -10,8 +66,122 @@
         margin: rem(14px) 0;
 
         .badge {
-            min-height: rem(30px);
-            min-width: rem(67px);
+            height: rem(30px);
+            width: rem(67px);
+        }
+    }
+
+    .bx-sweet {
+        .btn-purple {
+            width: rem(110px);
+            min-width: 0;
+            height: rem(40px);
+            flex-grow: 0;
+            font-weight: 500;
+            font-size: rem(16px);
+        }
+        .btn-text-purple {
+            white-space: nowrap;
+        }
+
+        a + div.d-flex {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+    }
+
+    .btn-close {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    header {
+        padding-bottom: rem(20px);
+    }
+
+    .bx-mycart {
+        row-gap: rem(60px);
+
+        .sm {
+            padding-bottom: .5em;
+        }
+
+        li {
+            position: relative;
+            padding: rem(30px) 0;
+            border-top: 1px solid $color-gray;
+        }
+    }
+
+    .size-btn-wrp {
+        border-radius: 5em;
+
+        span.btn {
+            pointer-events: none;
+        }
+
+        .btn {
+            border-radius: 0;
+            color: $color-body;
+            height: rem(40px);
+            min-width: rem(40px);
+            border: 2px solid $color-gray;
+            border-right: 0;
+            padding: 0 .625em;
+            
+            &:first-child {
+                border-top-left-radius: 5em;
+                border-bottom-left-radius: 5em;
+            }
+            &:last-child {
+                border-top-right-radius: 5em;
+                border-bottom-right-radius: 5em;
+                border-right: 2px solid $color-gray;
+            }
+            &.active, &:active, &:hover {
+                border-color: $color-dark;
+                background: $color-dark;
+                color: $color-white;
+            }
+        }
+    }
+
+    .col-lg-2 {
+        .img-wrp {
+            max-width: rem(200px);
+            max-height: rem(200px);
+        }
+    }
+
+    .sm {
+        display: block;
+    }
+
+    .color-chip {
+        display: inline-flex;
+        border-radius: 5em;
+        border: 2px solid $color-gray;
+        padding: .3em .35em;
+        gap: .25em;
+        font-size: rem(22px);
+    }
+
+    .price {
+        position: relative;
+        flex-direction: column;
+    }
+
+    footer {
+        padding-top: rem(30px);
+        margin-top: rem(10px);
+        border-top: 2px solid $color-gray;
+
+        .form-control {
+            display: inline-block;
+            width: 40%;
+            margin-left: rem(14px);
         }
     }
 
@@ -24,6 +194,34 @@
 
         .product {
             margin: rem(8px) 0;
+        }
+
+        .bx-sweet {
+
+            .btn-purple {
+                width: rem(160px);
+                height: rem(50px);
+                font-size: rem(18px);
+            }
+        }
+
+        .price {
+            div {
+                width: 50%;
+            }
+        }
+
+        .btn-close {
+            min-width: 0 !important;
+            padding: 0;
+            right: rem(10px);
+        }
+        
+    }
+
+    @include media-max(sm){
+        .price {
+            flex-direction: row;
         }
     }
 }
