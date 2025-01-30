@@ -1,50 +1,85 @@
-.bg {
-    section {
+section {
+    width: 100%;
+}
+
+.bg-sign {
+
+    .form-container {
+        padding-left: rem(50px);
+        padding-right: rem(50px);
+    }
+
+    .container {
+        max-width: 430px !important;
+        width: 100% !important;
+    }
+    
+    background: url("../../img/bg/Background.png") no-repeat center center;
+    background-size: cover;
+    form {
+        padding: 29px 0;
+    }
+}
+
+.bg-checkout {
+
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background: url("../../img/bg/Background2.png") no-repeat center center;
+    background-size: cover;
+    background-color: rgba(47, 24, 147, .8);
+
+    .nav-tabs {
+        width: 100%;
+        display: flex;
+
+        li {
+            width: 50%;
+            text-align: center;
+
+            .nav-link {
+                border: 0;
+                font-size: 14px;
+                padding: rem(30px) 0;
+                border-bottom: 3px solid $color-gray;
+
+                &:active, &:hover {
+                    color: $color-dark;
+                }
+
+                &.active {
+                    color: $color-dark;
+                    border-bottom: 3px solid $color-dark;
+                }
+
+            }
+        }
+    }
+
+    .container {
+        max-width: 570px;
         width: 100%;
     }
-
-    &-sign {
-
-        .form-container {
-            padding-left: rem(50px);
-            padding-right: rem(50px);
-        }
-
-        .container {
-            max-width: 430px !important;
-            width: 100% !important;
-        }
-        
-        background: url("../../img/bg/Background.png") no-repeat center center;
-        background-size: cover;
-        form {
-            padding: 29px 0;
-        }
+    .form-control {
+        border-top-left-radius: 5em !important;
+        border-bottom-left-radius: 5em !important;
     }
 
-    &-checkout {
+    form {
+        padding: 48px 68px;
+    }
+
+    @include media-max(lg){
         flex-direction: column;
-        flex-wrap: nowrap;
-        background: url("../../img/bg/Background2.png") no-repeat center center;
-        background-size: cover;
-        background-color: rgba(47, 24, 147, .8);
+
         .container {
-            max-width: 570px;
-            width: 100%;
-            padding: 48px 68px;
-        }
-        .form-control {
-            border-top-left-radius: 5em !important;
-            border-bottom-left-radius: 5em !important;
+            padding: 0;
         }
 
-        @include media-max(lg){
-            flex-direction: column;
-            .form-container {
-                padding: 40px 20px;
-            }
-            h1 { margin-top: rem(26px); }
+        form {
+            padding: 40px 20px;
         }
+        h1 { margin-top: rem(26px); }
     }
 }
 

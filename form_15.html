@@ -24,38 +24,69 @@
     <main id="ct" class="ct bg-checkout bx-form">
         <section>
             <h1 class="text-center fs-1 text-white">Checkout</h1>
-            <div class="container form-container round">
-                <form class="">
-                    <div class="input-wrp mt-0">
-                        <div class="row justify-content-between">
-                            <div class="input-group d-block col-12 col-lg-6">
-                                <p class="text-dark letter-spaing-2 sm fw700 mb-2">FIRST NAME</p>
-                                <input type="text" class="form-control w-100" placeholder="First name">
+            <div class="container round">
+                <div>
+                    <ul class="nav nav-2 nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active fw700" id="tab1-tab" data-toggle="tab" href="#tab1">CREDIT CARD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw700" id="tab2-tab" data-toggle="tab" href="#tab2">PAYPAL</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div id="tab1" class="tab-pane active">
+                        <form class="">
+                            <div class="input-wrp mt-0">
+                                <div class="row justify-content-between">
+                                    <div class="input-group d-block col-12 col-lg-6">
+                                        <p class="text-dark letter-spaing-2 sm fw700 mb-2">FIRST NAME</p>
+                                        <input type="text" class="form-control w-100" placeholder="First name">
+                                    </div>
+                                    <div class="input-group d-block col-12 col-lg-6 mt-3 mt-lg-0">
+                                        <p class="text-dark letter-spaing-2 sm fw700 mb-2">LAST NAME</p>
+                                        <input type="text" class="form-control w-100" placeholder="Last name">
+                                    </div>
+                                    <div class="input-group d-block col-12 col-lg-9 mt-3">
+                                        <p class="text-dark letter-spaing-2 sm fw700 mb-2">Card Number</p>
+                                        <input type="text" class="form-control w-100" placeholder="">
+                                    </div>
+                                    <div class="input-group d-block col-12 col-lg-3 mt-3">
+                                        <p class="text-dark letter-spaing-2 sm fw700 mb-2">CVV</p>
+                                        <input type="text" class="form-control w-100" placeholder="" maxlength="3">
+                                    </div>
+                                    <div class="input-group d-block col-12 col-lg-6 mt-3">
+                                        <p class="text-dark letter-spaing-2 sm fw700 mb-2">EXP DATE</p>
+                                        <input type="text" class="form-control w-100" placeholder="MM/YYYY">
+                                    </div>
+                                    <div class="input-group d-block col-12 col-lg-6 mt-3">
+                                        <p class="text-dark letter-spaing-2 sm fw700 mb-2">Country</p>
+                                        <input type="text" class="form-control w-100" placeholder="">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="input-group d-block col-12 col-lg-6 mt-3 mt-lg-0">
-                                <p class="text-dark letter-spaing-2 sm fw700 mb-2">LAST NAME</p>
-                                <input type="text" class="form-control w-100" placeholder="Last name">
-                            </div>
-                            <div class="input-group d-block col-12 col-lg-9 mt-3">
-                                <p class="text-dark letter-spaing-2 sm fw700 mb-2">Card Number</p>
-                                <input type="text" class="form-control w-100" placeholder="">
-                            </div>
-                            <div class="input-group d-block col-12 col-lg-3 mt-3">
-                                <p class="text-dark letter-spaing-2 sm fw700 mb-2">CVV</p>
-                                <input type="text" class="form-control w-100" placeholder="" maxlength="3">
-                            </div>
-                            <div class="input-group d-block col-12 col-lg-6 mt-3">
-                                <p class="text-dark letter-spaing-2 sm fw700 mb-2">EXP DATE</p>
-                                <input type="text" class="form-control w-100" placeholder="MM/YYYY">
-                            </div>
-                            <div class="input-group d-block col-12 col-lg-6 mt-3">
-                                <p class="text-dark letter-spaing-2 sm fw700 mb-2">Country</p>
-                                <input type="text" class="form-control w-100" placeholder="">
-                            </div>
-                        </div>
+                            <button type="button" class="btn btn-active">Purchase</button>
+                        </form>
                     </div>
-                    <button type="button" class="btn btn-active">Purchase</button>
-                </form>
+                    <div id="tab2" class="tab-pane">
+                        <form class="">
+                            <div class="input-wrp mt-0">
+                                <div class="row justify-content-between">
+                                    <div class="input-group d-block col-12 col-lg-6">
+                                        <p class="text-dark letter-spaing-2 sm fw700 mb-2">FIRST NAME</p>
+                                        <input type="text" class="form-control w-100" placeholder="First name">
+                                    </div>
+                                    <div class="input-group d-block col-12 col-lg-6 mt-3 mt-lg-0">
+                                        <p class="text-dark letter-spaing-2 sm fw700 mb-2">LAST NAME</p>
+                                        <input type="text" class="form-control w-100" placeholder="Last name">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-active">Purchase</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
