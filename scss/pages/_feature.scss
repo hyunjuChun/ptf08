@@ -16,4 +16,11 @@
     .text-muted {
         font-size: rem(42px);
     }
+
+
+    @include media-max(sm){
+        .divider {
+            margin: 40px 0;
+        }
+    }
 }

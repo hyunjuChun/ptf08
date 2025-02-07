@@ -20,7 +20,12 @@
 
     li {
         .img-wrp {
-            width: 100%; height: auto;
+            width: 100%;
+            height: auto;
+            
+            img {
+                display: inline-block;
+            }
         }
         .membership-wrp {
             padding: rem(46px);

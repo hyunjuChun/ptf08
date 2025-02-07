@@ -53,13 +53,13 @@
 
 
     &-active{
-        background: #fff;
-        color: $color-active;
+        background:  $color-active;
+        color: #fff;
         border: 2px solid $color-active;
 
         &:hover, &:focus{
-            background: $color-active;
-            color: $color-white !important;
+            background: $color-white;
+            color: $color-active !important;
         }
     }
 
@@ -278,11 +278,19 @@ form {
     input[type="checkbox"]:checked + .switch-on:after {
         content: "";
         transform: translateX(3px);
+
+        @include media-max(sm) {
+            transform: translateX(2px);
+        }
     }
     input[type="checkbox"] + .switch-on:after {
         content: "";
         transform: translateX(15px);
         transition: transform 200ms ease-in-out;
+
+        @include media-max(sm) {
+            transform: translateX(13px);
+        }
     }
 
 }
